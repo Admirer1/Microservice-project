@@ -39,7 +39,7 @@ public class OrderService {
             .map(OrderLineItems::getSkuCode)
             .toList();
             //save the order only if the product is available in stock
-           InventoryResponse[] inventoryResponseArray= webClient.get().uri("http://localhost:8082/api/inventory",
+           InventoryResponse[] inventoryResponseArray= webClient.get().uri("http://inventory-service/api/inventory",
            uriBuilder -> uriBuilder.queryParam("skuCode", skuCodes).build())
             .retrieve()
             .bodyToMono(InventoryResponse[].class)

@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+
 import com.example.coding.inventory_service.model.Inventory;
 import com.example.coding.inventory_service.repository.InventoryRepository;
 
@@ -31,4 +32,5 @@ public class InventoryServiceApplication {
 			inventoryRepository.save(inventory1);
 		};
 	}
+
 }
